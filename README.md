@@ -1,5 +1,5 @@
 # CCS231-Final-Project-Distributed-File-System
-A simple Python implementation of an simulated distributed file system. In partial fulfillment of the course CCS 231: Parallel and Distributed Computing.
+A simple Python implementation of an simulated distributed file system. In final fulfillment of the requirements for the course CCS 231: Parallel and Distributed Computing.
 
 ## Group Members:
 - Ajoc, Luis Rafael L.
