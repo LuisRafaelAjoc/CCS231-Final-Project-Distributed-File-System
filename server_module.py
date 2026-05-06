@@ -64,6 +64,7 @@ def is_alive(server):
 # Function for finding main
 def find_main():
     for server in SERVERS:
+        # The first from SERVERS list that is online automatically becomes main
         if is_alive(server):
             return server
     return None
@@ -75,8 +76,10 @@ class ServerNode:
         self.port = port
         self.fs = copy.deepcopy(INITIAL_FS)             # Initialize simulated file system
         
-        # All servers are initially replicas. If server is currently the only server
-        # or is the first server to go online, this variable becomes true
+        # The main server is the firstmost online server based on the hardcoded list
+        # For example, if the second server in the list is the first online server, it 
+        # becomes main. But if the server that precedes it in the list becomes online, 
+        # the preceding server becomes main and the second server becomes a replica
         self.is_main = False       
         self.replica_conns = []                     # Keep track of connections with replicas to replicate changes
 
