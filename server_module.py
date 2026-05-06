@@ -228,6 +228,7 @@ class ServerNode:
         except:
             log(self.port, "SYNC FAILED")            # If for some reason the sync failed, print error message
 
+    # Function for monitoring if server is main or not
     def monitor_leader(self):
         while True:
             self.is_main = (find_main() == (self.host, self.port))
