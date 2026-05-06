@@ -11,7 +11,7 @@ SERVERS = [
     ("127.0.0.1", 8001),
     ("127.0.0.1", 8002),
     ("127.0.0.1", 8003),
-    ("127.0.0.1", 8004),
+    # ("127.0.0.1", 8004),
 ]
 
 # Initial contents of hierarchical file system
@@ -97,6 +97,8 @@ class ServerNode:
             if not current_node:
                 return "ERROR"
 
+        return current_node['content']
+
     # Write file function
     # Input: file path of file, content of file
     def write_file(self, path, content):
@@ -114,7 +116,7 @@ class ServerNode:
         current_node["children"][file_path[-1]] = {"type": "file", "content": content}
 
         # The current node is now the requested file. Return content
-        return current_node["content"]
+        return current_node[file_path[-1]]["content"]
 
     # Delete file function
     # Input: path to requested file
