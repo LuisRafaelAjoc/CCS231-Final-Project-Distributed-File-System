@@ -67,6 +67,9 @@ def delete(path):
     if path in cache:
         del cache[path]
 
+def showcache():
+    print(cache)
+
 def list_dir(path="/"):
 
     res = send(f"LIST {path}")
@@ -98,6 +101,9 @@ def main():
             elif cmd.startswith("delete"):
                 _, path = cmd.split()                           # Remove 'delete' from the input
                 delete(path)
+
+            elif cmd == 'showcache':                            # Print contents of cache
+                showcache()
 
             elif cmd.startswith("list"):
                 # Unlike the other operations, the input could be either just 'list' or
