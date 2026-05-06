@@ -115,8 +115,8 @@ class ServerNode:
         # If the file already exists, the value of content is overwritten
         current_node["children"][file_path[-1]] = {"type": "file", "content": content}
 
-        # The current node is now the requested file. Return content
-        return current_node[file_path[-1]]["content"]
+        # # The current node is now the requested file. Return content
+        # return current_node[file_path[-1]]["content"]
 
     # Delete file function
     # Input: path to requested file
