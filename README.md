@@ -21,7 +21,7 @@ The order of initialization for a server or the client is irrelevant; both are c
 ### Client
 - In a terminal, run `python client.py`
 ### Server
-- Open 2 new terminals
+- Open 3 new terminals
 - For each terminal, run:
   - `python server.py 8001`
   - `python server.py 8002`
