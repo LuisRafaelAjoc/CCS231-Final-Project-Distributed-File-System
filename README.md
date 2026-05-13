@@ -35,7 +35,8 @@ Note: To perform operations, the client and at least one server must be running
 ### Read File
 - To read a file, type `read {file pathname}` in client terminal
 ### Write File
-- To write/overwrite a file, type `write {file pathname}` in client terminal
+- To write/overwrite a file, type `write {file pathname} {content}` in client terminal
+
 Note: The system will automatically create new directories if the the file path has directories that the file system currently do not have
 ### Delete File
 - To delete a file, type `delete {file pathname}` in client terminal
@@ -48,4 +49,5 @@ Note: The system will automatically create new directories if the the file path 
 - To simulate a server crash, select a server and type `Ctrl + C`
 - As long as one server remains available, the file system will remain up to date
 - Crashed servers that have recovered will sync using the file system of the available server
+
 Note: The servers do not have persistent storage. If all 'crash' and initialized once more, the file system will be at the initial state
